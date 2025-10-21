@@ -12,3 +12,13 @@ dependencies = [
     "uvicorn>=0.34.2",
     "python-multipart>=0.0.18",
 ]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["api"]
+exclude = ["frontend"]

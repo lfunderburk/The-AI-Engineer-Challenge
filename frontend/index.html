@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Beyond ChatGPT — Frontend</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Beyond ChatGPT — Demo</h1>
+    </header>
+
+    <main>
+      <label class="field">
+        <span>Developer Message (system):</span>
+        <textarea id="developer_message" placeholder="Instructions for the assistant"></textarea>
+      </label>
+
+      <label class="field">
+        <span>User Message:</span>
+        <textarea id="user_message" placeholder="Ask something..."></textarea>
+      </label>
+
+      <label class="field small">
+        <span>Model:</span>
+        <input id="model" value="gpt-4.1-mini" />
+      </label>
+
+      <label class="field small">
+        <span>API Key:</span>
+        <input id="api_key" placeholder="sk-... (for local testing)" />
+      </label>
+
+      <div class="actions">
+        <button id="send">Send</button>
+        <button id="clear">Clear</button>
+      </div>
+
+      <section class="output">
+        <h2>Response</h2>
+        <pre id="response" class="response"></pre>
+      </section>
+    </main>
+
+    <footer>
+      <small>Local demo — expects backend at <code>http://localhost:8000</code></small>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
