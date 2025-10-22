@@ -9,8 +9,10 @@ from openai import OpenAI
 import os
 from typing import Optional
 
-# Initialize FastAPI application with a title
-app = FastAPI(title="OpenAI Chat API")
+from fastapi.staticfiles import StaticFiles
+
+app = FastAPI()
+app.mount("/", StaticFiles(directory="frontend", html=True), name="static")
 
 # Configure CORS (Cross-Origin Resource Sharing) middleware
 # This allows the API to be accessed from different domains/origins
